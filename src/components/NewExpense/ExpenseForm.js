@@ -1,10 +1,11 @@
 import {useState} from "react";
 import "./ExpenseForm.css";
 
-const ExpenseForm = ({onSubmitSave}) => {
+const ExpenseForm = ({onSubmitSave, toggle}) => {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState("");
+  const [showForm, setShowForm] = useState(true);
   // const [inputData, setInputData] = useState({
   //   title: "",
   //   amount: "",
@@ -77,6 +78,9 @@ const ExpenseForm = ({onSubmitSave}) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={toggle}>
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
