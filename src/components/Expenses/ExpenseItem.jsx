@@ -3,10 +3,7 @@ import Card from '../UI/Card';
 import ExpenseDate from './ExpenseDate';
 import './ExpenseItem.css'
 const ExpenseItem = ({ date, title, amount }) => {
-  const [titleState, setTitleState] = useState(title)
-
-
-
+  const [titleState,] = useState(title)
   return (
     <li>
       <Card className='expense-item'>
